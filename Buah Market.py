@@ -86,8 +86,8 @@ while True:
         for index,y in enumerate(stok_buah["ListBuah"]):
             print(f"{index}\t |{y['Nama']}\t\t |{y['Stok']}\t  |{y['Harga']}")
         print()
-        pilihan = int(input("Pilih index buah yang ingin dibeli: "))-1
-        if 0 >= pilihan < len(stok_buah["ListBuah"]):
+        pilihan = int(input("Pilih index buah yang ingin dibeli: "))
+        if 0 <= pilihan < len(stok_buah["ListBuah"]):
             buah = stok_buah["ListBuah"][pilihan]
             jumlah = int(input(f"Masukkan jumlah {buah['Nama'][0]} yang ingin dibeli: "))
             if jumlah <= buah["Stok"][0]:
